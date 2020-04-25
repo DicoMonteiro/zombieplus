@@ -14,7 +14,7 @@
     "test:notag": "./node_modules/.bin/nightwatch --skiptags smoke, 404",
     "stage:smoke": "./node_modules/.bin/nightwatch --tag smoke --env=stage",
     "test": "./node_modules/.bin/nightwatch",
-    "test:ci": "./node_modules/.bin/nightwatch --tag smoke --env=headless"
+    "test:ci": "./node_modules/.bin/nightwatch --env=headless"
   },
   "keywords": [
     "qaninja",

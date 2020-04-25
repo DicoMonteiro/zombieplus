@@ -20,14 +20,14 @@ module.exports = {
         // URL função responsável por abrir o browser e execute a url
         browser
             .url('http://zombie-web:5000/login')
-            .waitForElementVisible('.card-login', 3000)
+            .waitForElementVisible('.card-login', 10000)
             .assert.titleContains('ZombiePlus')
             .assert.visible('input[name=email]')
             .setValue('input[name=email]', 'didico@ninjazombie.com')
             .setValue('input[name=password]', 'pwd123')
             .assert.visible(".login-button")
             .click(".login-button")
-            .waitForElementPresent(userInfo, 5000)
+            .waitForElementPresent(userInfo, 10000)
             .assert.containsText(userInfo, 'Adriano Almeida')
     },
 

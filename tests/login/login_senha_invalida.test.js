@@ -21,7 +21,8 @@ module.exports = {
         login
             // Pegando a função loginActions criada dentro da page login.js
             .with('didico@ninjazombie.com', 'test123')
-            .expectAlert('@userError', 'Usuário e/ou senha inválidos')
+            .expectAlertDanger('Usuário e/ou senha inválidos')
+            // .expectAlert('@userError', 'Usuário e/ou senha inválidos')
             // Pegando os elementos criado dentro da page login.js no module.exports
             // .navigate()
             // .waitForElementVisible('@form', 3000)

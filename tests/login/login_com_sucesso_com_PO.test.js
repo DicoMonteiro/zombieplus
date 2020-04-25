@@ -35,8 +35,8 @@ module.exports = {
             // .click('@loginButton')
 
         sidebar
-            .waitForElementPresent('@userInfo', 5000)
-            .expectInfo('@userInfo', 'Adriano Almeida')
+            .waitForElementPresent('@userInfo', 10000)
+            .expectLoggedUser('Adriano Almeida')
             
     }
 

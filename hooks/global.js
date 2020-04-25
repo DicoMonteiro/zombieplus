@@ -2,8 +2,8 @@
 
 module.exports = {
     beforeEach: (browser, done) => {
-        // browser.resizeWindow(1400, 900)
-        browser.maximizeWindow()
+        browser.resizeWindow(1400, 900)
+        // browser.maximizeWindow()
         done()
     },
 

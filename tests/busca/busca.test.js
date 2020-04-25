@@ -27,7 +27,7 @@ module.exports = {
         login
             .with('didico@ninjazombie.com', 'pwd123')
         sidebar
-            .expectInfo('@userInfo', 'Adriano Almeida')
+            .expectLoggedUser('Adriano Almeida')
     },
 
     'quando eu faço a busca pelo título': function (browser) {
@@ -42,8 +42,8 @@ module.exports = {
     'então o título buscado deve ser exibido na lista': function (browser) {
         let movie = browser.page.movie()
         movie
-            .waitForElementPresent('@listMovies', 5000)
-            .waitForElementPresent('@listTr', 2000)
+            .waitForElementPresent('@listMovies', 10000)
+            .waitForElementPresent('@listTr', 10000)
             .assert.containsText('@listMovies', movieData.title)
         movie
             .expect.elements('@listTr').count.to.equal(1)

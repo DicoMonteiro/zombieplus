@@ -17,7 +17,7 @@ module.exports = {
         let login = browser.page.login()
         login
             .with('', 'pwd123')
-            .expectAlert('@userAlert', 'Opps. Cadê o email?')
+            .expectAlertInfo('Opps. Cadê o email?')
             // .navigate()
             // .waitForElementVisible('@form', 3000)
             // .assert.titleContains('ZombiePlus')

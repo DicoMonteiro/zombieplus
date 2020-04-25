@@ -18,7 +18,8 @@ module.exports = {
         let login = browser.page.login()
         login
             .with('didico@ninjazombie.com', '')
-            .expectAlert('@userAlert', 'Opps. Cadê a senha?')
+            .expectAlertInfo('Opps. Cadê a senha?')
+            // .expectAlert('@userAlert', 'Opps. Cadê a senha?')
             // .navigate()
             // .waitForElementVisible('@form', 3000)
             // .assert.titleContains('ZombiePlus')

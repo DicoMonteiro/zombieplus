@@ -4,18 +4,24 @@ var loginActions = {
     with: function (username, password) {
         return this
             .navigate()
-            .waitForElementVisible('@form', 3000)
+            .waitForElementVisible('@form', 10000)
             .assert.titleContains('ZombiePlus')
-            .assert.visible('@emailInput')
+            // .assert.visible('@emailInput')
             .setValue('@emailInput', username)
             .setValue('@passInput', password)
-            .assert.visible('@loginButton')
+            // .assert.visible('@loginButton')
             .click('@loginButton')
     },
-    expectAlert: function (element,text) {
+    expectAlertDanger: function (text) {
         return this
-            .waitForElementVisible(element, 3000)
-            .assert.containsText(element, text)
+            .waitForElementVisible('@alertDanger', 10000)
+            .assert.containsText('@alertDanger', text)
+    },
+
+    expectAlertInfo: function (text) {
+        return this
+            .waitForElementVisible('@alertInfo', 10000)
+            .assert.containsText('@alertInfo', text)
     }
 }
 
@@ -30,7 +36,7 @@ module.exports = {
         emailInput:  '#emailId',
         passInput: '#passId',
         loginButton: '.login-button',
-        userError: '.alert-danger',
-        userAlert: '.alert-info'
+        alertDanger: '.alert-danger',
+        alertInfo: '.alert-info'
     }
 }

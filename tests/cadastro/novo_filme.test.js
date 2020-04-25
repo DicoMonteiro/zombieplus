@@ -26,7 +26,7 @@ module.exports = {
         login
             .with('didico@ninjazombie.com', 'pwd123')
         sidebar
-            .expectInfo('@userInfo', 'Adriano Almeida')
+            .expectLoggedUser('Adriano Almeida')
     },
 
     // 'dado que eu tenha um novo filme': function (browser) {
@@ -63,7 +63,7 @@ module.exports = {
             .insertCast(movieData.cast)
             .setValue('@plotTextarea', movieData.plot)
             .uploadCover(movieData.cover)
-            .pause(5000)
+            // .pause(5000)
             .click('@createButton')
             // .pause(10000)
     },
@@ -79,7 +79,7 @@ module.exports = {
 
         movie
             // .waitForElementVisible('@listMovies', 5000)
-            .waitForElementPresent('@listMovies', 5000)
+            .waitForElementPresent('@listMovies', 10000)
             .assert.containsText('@listMovies', movieData.title)
     }
 }

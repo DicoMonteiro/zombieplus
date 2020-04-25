@@ -16,7 +16,7 @@ module.exports = {
         let login = browser.page.login()
         login
             .with('teste@ninjazombie.com', 'pwd123')
-            .expectAlert('@userError', 'Usuário e/ou senha inválidos')
+            .expectAlertDanger('Usuário e/ou senha inválidos')
             // .navigate()
             // .waitForElementVisible('@form', 3000)
             // .assert.titleContains('ZombiePlus')

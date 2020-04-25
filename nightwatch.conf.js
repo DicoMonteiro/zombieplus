@@ -67,7 +67,7 @@ module.exports = {
                 waitForConditionTimeout: defaultTimeout // As vezes a conexão com a internet/rede fica lenta
             },
             webdriver: {
-                server_path: '.\\node_modules\\.bin\\geckodriver.cmd',
+                server_path: './node_modules/.bin/geckodriver',
                 port: 4444
             },
             desiredCapabilities: {

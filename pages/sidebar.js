@@ -1,14 +1,14 @@
 
-var dashboardView = {
-    expectInfo: function (element,text) {
+var userActions = {
+    expectLoggedUser: function (text) {
         return this
-            .waitForElementVisible(element, 3000)
-            .assert.containsText(element, text)
+            .waitForElementVisible('@userInfo', 10000)
+            .assert.containsText('@userInfo', text)
     }
 } 
 
 module.exports = {
-    commands: [dashboardView],
+    commands: [userActions],
     elements: {
         userInfo: '.user .info span'
     }

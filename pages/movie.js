@@ -4,14 +4,14 @@ var createActions = {
     createForm: function () {
         return this
             .click('@addMovieButton')
-            .waitForElementVisible('@movieForm', 3000)
+            .waitForElementVisible('@movieForm', 10000)
     },
     
     selectStatus: function (status) {
         return this
             .click('@statusSelect')
             .useXpath()
-            .waitForElementVisible(`//li//span[contains(text(), "${status}")]`, 2000)
+            .waitForElementVisible(`//li//span[contains(text(), "${status}")]`, 10000)
             .click(`//li//span[contains(text(), "${status}")]`)
             .useCss()
     },
@@ -36,7 +36,7 @@ var createActions = {
                 .api.keys(browser.api.Keys.TAB)
         })
 
-       return this
+       return this.pause(1000)
     },
 
     uploadCover: function (fileName) {
