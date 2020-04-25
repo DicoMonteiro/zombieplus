@@ -1,0 +1,7 @@
+backup_tests
+codigos_fonte
+node_modules
+tests_output
+chromedriver.log
+geckodriver.log
+selenium-server.log
