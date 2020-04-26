@@ -3,6 +3,7 @@
 
 module.exports = {
 
+    '@disabled': true,
     '@tags': ['smoke', '404'],
 
     before: function (browser) {
